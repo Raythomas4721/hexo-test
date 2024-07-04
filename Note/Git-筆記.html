@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Git 筆記 | Po Jui Cheng</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Git 基礎操作 git init (新建數據庫) 新增一個 index.html 檔案 這時，您可以輸入 git status 指令去查看 你可以看到 Untracked files 的檔案有 index.html，Untracked 的意思是，Git 偵測到你有新增這筆檔案，但尚未是 Git 追蹤的對象。 那麼要如何將檔案加入到索引呢？指令是：  1git add &lt;檔案名稱&gt;">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Git 筆記">
+<meta property="og:url" content="https://raythomas4721.github.io/hexo-test/Note/Git-%E7%AD%86%E8%A8%98.html">
+<meta property="og:site_name" content="Po Jui Cheng">
+<meta property="og:description" content="Git 基礎操作 git init (新建數據庫) 新增一個 index.html 檔案 這時，您可以輸入 git status 指令去查看 你可以看到 Untracked files 的檔案有 index.html，Untracked 的意思是，Git 偵測到你有新增這筆檔案，但尚未是 Git 追蹤的對象。 那麼要如何將檔案加入到索引呢？指令是：  1git add &lt;檔案名稱&gt;">
+<meta property="og:locale" content="zh_TW">
+<meta property="og:image" content="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_12_27_55_(1)mh1b5.png">
+<meta property="og:image" content="https://w3c.hexschool.com/img/carbon_(11)_(1)v0kkj.png">
+<meta property="og:image" content="https://w3c.hexschool.com/img/carbon_(12)_(1)vvona.png">
+<meta property="article:published_time" content="2024-05-27T08:29:57.000Z">
+<meta property="article:modified_time" content="2024-07-04T07:17:31.633Z">
+<meta property="article:author" content="Po Jui Cheng">
+<meta property="article:tag" content="HTML, CSS, Javascript, Vue, React">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_12_27_55_(1)mh1b5.png">
+  
+    <link rel="alternate" href="/hexo-test/atom.xml" title="Po Jui Cheng" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/hexo-test/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/hexo-test/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/hexo-test/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fork-awesome@1.2.0/css/fork-awesome.min.css">
+
+<meta name="generator" content="Hexo 7.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/hexo-test/" id="logo">Po Jui Cheng</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/hexo-test/" id="subtitle">Frontend Developer</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/hexo-test/">首頁</a>
+        
+          <a class="main-nav-link" href="/hexo-test/archives">部落格</a>
+        
+          <a class="main-nav-link" href="/hexo-test/note">筆記</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          
+            <a class="nav-icon" target="_blank" rel="noopener" href="https://github.com/Raythomas4721?tab=repositories"><span class="fa fa-github"></span></a>
+          
+        
+        
+          <a class="nav-icon" href="/hexo-test/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://raythomas4721.github.io/hexo-test"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-" class="h-entry article article-type-page" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/hexo-test/Note/Git-%E7%AD%86%E8%A8%98.html" class="article-date">
+  <time class="dt-published" datetime="2024-05-27T08:29:57.000Z" itemprop="datePublished">2024-05-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Git 筆記
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h2 id="Git-基礎操作"><a href="#Git-基礎操作" class="headerlink" title="Git 基礎操作"></a>Git 基礎操作</h2><ol>
+<li><strong>git init (新建數據庫)</strong></li>
+<li>新增一個 <code>index.html</code> 檔案</li>
+<li>這時，您可以輸入 <code>git status</code> 指令去查看</li>
+<li>你可以看到 <code>Untracked files</code> 的檔案有 <code>index.html</code>，Untracked 的意思是，Git 偵測到你有新增這筆檔案，但尚未是 Git 追蹤的對象。</li>
+<li>那麼要如何將檔案加入到索引呢？指令是：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add &lt;檔案名稱&gt;</span><br></pre></td></tr></table></figure>
+
+<p>以本案例來說，就必須用<code>git add index.html</code> 來加入索引。</p>
+<ol>
+<li>您會發現該檔案狀態本來是 <code>Untracked files</code>，變成是<code>Changes to be committed</code>，這樣就表示有成功加入到索引。</li>
+<li>所以這裡我就輸入<code>git commit -m &quot;新增網頁&quot;</code>來提交版本</li>
+</ol>
+<p>＃＃ <code>git add .</code> 的意思是將所有檔案加入索引</p>
+<h2 id="git-remote-常見指令"><a href="#git-remote-常見指令" class="headerlink" title="git remote 常見指令"></a>git remote 常見指令</h2><p>如果你要觀察本地數據庫跟遠端數據庫的關聯，就得仰賴 <code>git remote</code> 系列指令</p>
+<ul>
+<li>加入遠端數據庫：<code>git remote add &lt;遠端數據庫簡稱&gt; &lt;url&gt;</code></li>
+<li>觀看遠端數據庫列表：<code>git remote</code></li>
+<li>觀看遠端數據庫列表(包含 rul)：<code>git remote -v</code></li>
+<li>下載遠端數據庫：<code>git clone &lt;url&gt;</code></li>
+</ul>
+<h4 id="總結"><a href="#總結" class="headerlink" title="總結"></a>總結</h4><ol>
+<li>如果你本地有一個數據庫，想加入遠端數據庫時，請用 <code>git remote add &lt;遠端數據庫簡稱&gt; &lt;url&gt;</code></li>
+<li>你想將本地資料推送到遠端數據庫時：<code>git push &lt;數據庫簡稱&gt; &lt;分支名稱&gt;</code></li>
+</ol>
+<h2 id="git-pull-下載同步更新"><a href="#git-pull-下載同步更新" class="headerlink" title="git pull - 下載同步更新"></a>git pull - 下載同步更新</h2><p>通常會使用到 <code>git pull</code>，比較常見的情境，就是這個遠端數據庫有多人同步開發的關係才有可能。</p>
+<p>實務開發時，常會透過 <code>git pull</code> 指令來抓取遠端數據庫資料來做更新。以避免本地端跟遠端資料落差太大。</p>
+<h2 id="git-checkout-移動-HEAD-指標"><a href="#git-checkout-移動-HEAD-指標" class="headerlink" title="git checkout 移動 HEAD 指標"></a><strong>git checkout 移動 HEAD 指標</strong></h2><h2 id="什麼是-HEAD？"><a href="#什麼是-HEAD？" class="headerlink" title="什麼是 HEAD？"></a><strong>什麼是 HEAD？</strong></h2><p><code>HEAD</code> 就是你目前指向的版本狀態，而 <code>HEAD</code> 可以選擇它指向到</p>
+<ul>
+<li>分支 (branch)</li>
+<li>commit 版本</li>
+</ul>
+<h2 id="如果我想看最初的版本？"><a href="#如果我想看最初的版本？" class="headerlink" title="如果我想看最初的版本？"></a><strong>如果我想看最初的版本？</strong></h2><p>此時 <code>HEAD</code> 就會派上用場了，我們必須透過他對到我們指定 commit 版。此時我們必須先知道該 commit 的 SHA-1 編號，可以用 <code>git log</code> 查詢。</p>
+<p><img src="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_12_27_55_(1)mh1b5.png" alt="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_12_27_55_(1)mh1b5.png"></p>
+<p>在每個 commit 旁邊的亂數就是 <code>SHA-1</code> 值，可以取前幾碼來準備切換，像我想回到第一個版本，那就是下圖白框處。指令則是</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 1849273&lt;指定 commit SHA-1&gt;</span><br></pre></td></tr></table></figure>
+
+<p>切換後，你就可以看到自己的工作目錄，彷彿用了時光機，回到以前你指定的開發歷史狀態。</p>
+<h2 id="想再切換到最新狀態的話呢？"><a href="#想再切換到最新狀態的話呢？" class="headerlink" title="想再切換到最新狀態的話呢？"></a><strong>想再切換到最新狀態的話呢？</strong></h2><p>你可以使用此指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
+
+<p>也就是讓 <code>HEAD</code> 再綁定回 <code>master</code> 的分支即可</p>
+<h1 id="分支建立-git-branch"><a href="#分支建立-git-branch" class="headerlink" title="分支建立(git branch)"></a><strong>分支建立(git branch)</strong></h1><p><strong>要掌握分支才能算是真正了解 Git 操作</strong></p>
+<h2 id="為什麼要使用分支？"><a href="#為什麼要使用分支？" class="headerlink" title="為什麼要使用分支？"></a><strong>為什麼要使用分支？</strong></h2><p>在實務開發上，因為有些開發版本是屬於「上線穩定版」、「測試版本」、「修改 BUG 版本」，但我們總不能將這些版本混在一起，會導致管理不易。所以 Git 為了解決此問題，開發了<code>分支</code>功能</p>
+<h3 id="1-環境說明"><a href="#1-環境說明" class="headerlink" title="1.環境說明"></a><strong>1.環境說明</strong></h3><p>在你使用 <code>git init</code> 開本地數據庫時，預設的分支名稱就是 <code>master</code>，所以現在我們可以說：</p>
+<ul>
+<li><strong>目前有一條 <code>master</code> 分支，裡面有 2 個 commit</strong></li>
+</ul>
+<p>!<a target="_blank" rel="noopener" href="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_12.57.25ni0zk.png">https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_12.57.25ni0zk.png</a></p>
+<h3 id="2-新增分支"><a href="#2-新增分支" class="headerlink" title="2. 新增分支"></a><strong>2. 新增分支</strong></h3><p>接下來，我們想要開始新增新功能，但又不能污染到目前 <code>master</code> 的穩定版本狀態，於是我們新增一個 <code>dev</code> 分支，指令是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch dev</span><br></pre></td></tr></table></figure>
+
+<p>!<a target="_blank" rel="noopener" href="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13.03.58npyhw.png">https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13.03.58npyhw.png</a></p>
+<p>指令輸入完後，就可以看到<code>dev</code> 的分支也在 <code>c2</code> 。但目前的 <code>HEAD</code> 是指向到 <code>master</code>，所以我們必須將 <code>HEAD</code> 切換到 <code>dev</code>。</p>
+<h3 id="2-切換分支"><a href="#2-切換分支" class="headerlink" title="2. 切換分支"></a><strong>2. 切換分支</strong></h3><p>當我們要切換分支時，指令是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout dev</span><br></pre></td></tr></table></figure>
+
+<p>此時狀態就會變成下圖，目前的工作目錄已經指向到 <code>dev</code>。</p>
+<p>!<a target="_blank" rel="noopener" href="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13.12.21o0tmv.png">https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13.12.21o0tmv.png</a></p>
+<p>但你觀看工作目錄時，其實內容都沒有變更，因為目前 <code>master</code> 與 <code>dev</code> 都是指向在 <code>c2</code> 的 commit 上。</p>
+<p>再來我們就開始在 <code>dev</code> 上開發，並新增 2 個 commit。</p>
+<p>!<a target="_blank" rel="noopener" href="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13.22.42oh0ud.png">https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13.22.42oh0ud.png</a></p>
+<p>在這裡，我們可以用 <code>git log</code> 來反覆驗證。</p>
+<ul>
+<li>你確實可以看到 <code>dev</code> 目前在第四個 commit 紀錄上，並且 <code>HEAD</code> 是指向到 <code>dev</code></li>
+<li>而 <code>master</code> 仍停留在第二個 commit</li>
+</ul>
+<p>!<a target="_blank" rel="noopener" href="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13_22_33of5iq.png">https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13_22_33of5iq.png</a></p>
+<h3 id="3-觀看分支狀態"><a href="#3-觀看分支狀態" class="headerlink" title="3.觀看分支狀態"></a><strong>3.觀看分支狀態</strong></h3><p>接下來我們切換回 <code>master</code> 看它的狀態。指令是：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout master</span><br></pre></td></tr></table></figure>
+
+<p>!<a target="_blank" rel="noopener" href="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13.27.26okqh0.png">https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13.27.26okqh0.png</a></p>
+<p>此時你也可以用 <code>git log</code> 觀看，會發現只剩下 2 個 commit。</p>
+<p>!<a target="_blank" rel="noopener" href="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13.28.56omgms.png">https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13.28.56omgms.png</a></p>
+<p>原因也是因為你目前 <code>master</code> 的位置是在第二個 commit，你自然得不到用 <code>dev</code> 開發的後兩個 commit 紀錄。</p>
+<p>但是 <code>dev</code> 分支被開發的目的，就是確保功能開發好後，再讓正式環境的 <code>master</code> 可以合併 <code>dev</code> 的內容。</p>
+<h2 id="分支合併-git-merge"><a href="#分支合併-git-merge" class="headerlink" title="分支合併(git merge)"></a><strong>分支合併(git merge)</strong></h2><p>因為目前 <code>master</code> 版本比較舊，你就必須先用 <code>git checkout master</code> 指令，讓 <code>HEAD</code> 移動到 <code>master</code>。</p>
+<p>確保有切換後，就可以下此指令：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge dev</span><br></pre></td></tr></table></figure>
+
+<p>此時，<code>master</code> 位置就會在 <code>c4</code> 了。</p>
+<p>!<a target="_blank" rel="noopener" href="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13.41.15p20gf.png">https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_13.41.15p20gf.png</a></p>
+<p><code>git merge &lt;分支名稱&gt;</code> 的指令，白話文來說，就是你想要其他分支裡的 commit 紀錄時，就使用此指令來合併版本。</p>
+<p>像是本範例中，<code>master</code> 的資料比較舊，為了獲得 <code>dev</code> 的最新版本，所以就必須先切換到 <code>master</code>，再來 merge <code>dev</code>，獲取最新版本資訊。</p>
+<p>我們讓 <code>master</code> 原本在 <code>c2</code> ，藉由 <code>git merge dev</code> 指令進行合併，也讓 <code>master</code> 移動到 <code>C4</code>。</p>
+<p>這個合併過程，我們會稱作<strong>快轉模式(fast-forward)</strong></p>
+<h2 id="分支合併-非快轉模式"><a href="#分支合併-非快轉模式" class="headerlink" title="分支合併(非快轉模式)"></a><strong>分支合併(非快轉模式)</strong></h2><p>所以如果我 <code>master</code> 新增一個 commit 的話，就不會觸發快轉模式，如下圖。</p>
+<p>!<a target="_blank" rel="noopener" href="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_15.00.01rwbro.png">https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_15.00.01rwbro.png</a></p>
+<p>這張圖發生什麼事了呢？以下為時間順序流程：</p>
+<ol>
+<li>當 <code>master</code> 推到 <code>c2</code> 時，開了 <code>dev</code> 分支</li>
+<li>checkout 到 <code>dev</code> 後，新增兩個 commit</li>
+<li>接著 checkout 到 <code>master</code> ，新增一個 commit</li>
+</ol>
+<p>所以在此時 <code>master</code> 的位置就不是在 <code>c2</code> 上，而是在 <code>c5</code>，因此就不會觸發 <strong>快轉模式</strong></p>
+<h2 id="嘗試-merge-合併"><a href="#嘗試-merge-合併" class="headerlink" title="嘗試 merge 合併"></a><strong>嘗試 merge 合併</strong></h2><p>接下來我們就試著輸入 <code>git merge dev</code>，看看有何變化，此時如果你兩個分支沒有改到同一行 CODE 造成衝突，他會跳出你前面設定的編輯器，上頭會寫「預設合併訊息」。假使訊息沒問題，儲存關閉後，就會合併成功，</p>
+<p>!<a target="_blank" rel="noopener" href="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_15.05.26s5ivv.png">https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_15.05.26s5ivv.png</a></p>
+<p>由於沒有觸發快轉，所以分支合併時，會<strong>額外產生出一個 commit</strong>，也就是 <code>c6</code>。</p>
+<p>!<a target="_blank" rel="noopener" href="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_15.09.48s8bxm.png">https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_15.09.48s8bxm.png</a></p>
+<h3 id="Q：那這樣-master-的-commit-會有幾個？"><a href="#Q：那這樣-master-的-commit-會有幾個？" class="headerlink" title="Q：那這樣 master 的 commit 會有幾個？"></a><strong>Q：那這樣 <code>master</code> 的 commit 會有幾個？</strong></h3><p>A：6 個，因為合併 <code>dev</code> 後，<code>master</code> 也擁有那些 <code>commit 紀錄</code>，你可以用 <code>git log</code> 查詢驗證。</p>
+<h3 id="Q：那-dev-此時有-c5、c6-的資料嗎？"><a href="#Q：那-dev-此時有-c5、c6-的資料嗎？" class="headerlink" title="Q：那 dev 此時有 c5、c6 的資料嗎？"></a><strong>Q：那 <code>dev</code> 此時有 <code>c5</code>、<code>c6</code> 的資料嗎？</strong></h3><p>A：不會有，<code>dev</code> 只會有 <code>c1</code> 到 <code>c4</code> 的資料。</p>
+<h3 id="Q：假使我希望-dev-也可以擁有-master-的-c5、c6-資料呢？"><a href="#Q：假使我希望-dev-也可以擁有-master-的-c5、c6-資料呢？" class="headerlink" title="Q：假使我希望 dev 也可以擁有 master 的 c5、c6 資料呢？"></a><strong>Q：假使我希望 <code>dev</code> 也可以擁有 <code>master</code> 的 <code>c5</code>、<code>c6</code> 資料呢？</strong></h3><p>A：那就 checkout 到 <code>dev</code> 後，下 <code>git merge master</code> 就可以。</p>
+<h2 id="本地分支衝突"><a href="#本地分支衝突" class="headerlink" title="本地分支衝突"></a><strong>本地分支衝突</strong></h2><p>並非每次分支合併都會一帆風順，如果剛好合併內容<strong>同時修改同一行 CODE</strong> 時，就會導致衝突。</p>
+<p>!<a target="_blank" rel="noopener" href="https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_16.17.18up2mf.png">https://w3c.hexschool.com/img/%E8%9E%A2%E5%B9%95%E6%88%AA%E5%9C%96_2019-11-19_16.17.18up2mf.png</a></p>
+<ol>
+<li><code>dev</code> 的 <code>c4</code> 分支，修改了 <code>all.css</code>，加入了 <code>h1</code> 樣式進去</li>
+<li><code>master</code> 的 <code>c5</code> 分支，也同樣改了 <code>all.cs</code>，並加入了 <code>h1</code> 樣式</li>
+</ol>
+<p>更重要的是他們改的行數是一樣的，所以必然會產生衝突。</p>
+<p>接下來我們就 checkout 到 <code>master</code> 後，來合併到 <code>dev</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git merge dev</span><br></pre></td></tr></table></figure>
+
+<p>此時，終端機會回饋衝突訊息</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">❯ git merge dev</span><br><span class="line">Auto-merging all.css</span><br><span class="line">CONFLICT (content): Merge conflict in all.css</span><br><span class="line">Automatic merge failed; fix conflicts and then commit the result.</span><br></pre></td></tr></table></figure>
+
+<p>這裡的意思是，all.css 確實發生衝突了，此時該檔案會變成 <code>Unmerged</code> 狀態，所以目前合併過程尚未，Git 請我們將衝突檔案解決掉後，才能順利合併。</p>
+<p>所以這裡該怎麼做呢？我們先用 <code>git status</code> 觀看訊息。你會發現 <code>all.css</code> 目前變成 <code>Unmerged paths</code> 狀態。</p>
+<p><img src="https://w3c.hexschool.com/img/carbon_(11)_(1)v0kkj.png" alt="https://w3c.hexschool.com/img/carbon_(11)_(1)v0kkj.png"></p>
+<p>所以接下來，我們就進入到 <code>all.css</code> 看看發生什麼事情了。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span>&#123;</span><br><span class="line">&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD</span><br><span class="line">    <span class="attribute">color</span>: blue</span><br><span class="line">=======</span><br><span class="line">    color: red</span><br><span class="line">&gt;&gt;&gt;&gt;&gt;&gt;&gt; dev</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>來詳細解釋下：</p>
+<ol>
+<li>從 &lt;&lt;&lt;&lt; 到 &#x3D;&#x3D;&#x3D; 的內容，意思是你當前的 HEAD 位置，依此範例，就是 <code>master</code> 。</li>
+<li>從 &#x3D;&#x3D;&#x3D; 到 &gt;&gt;&gt; 就是 <code>dev</code> 的內容。</li>
+</ol>
+<p>此時你要衡量要保留 <code>master</code> 還是 <code>dev</code>，假使你要保留讓文字變成藍色，那就讓他變成以下程式碼。</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">h1</span>&#123;</span><br><span class="line">    <span class="attribute">color</span>: blue</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>當儲存後，你就可以輸入 <code>git add all.css</code> 將它重新加入索引後，你可以使用 <code>git status</code> 觀察狀態。</p>
+<p><img src="https://w3c.hexschool.com/img/carbon_(12)_(1)vvona.png" alt="https://w3c.hexschool.com/img/carbon_(12)_(1)vvona.png"></p>
+<p>此時的回饋就會說，您目前沒有任何衝突了，可以使用 <code>git commit</code> 來提交。於是我們就輸入該指令後。就會彈跳編輯器顯示預設訊息。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">Merge branch &#x27;dev&#x27;</span><br><span class="line"></span><br><span class="line"># Conflicts:</span><br><span class="line">#    all.css</span><br><span class="line">#</span><br><span class="line"># It looks like you may be committing a merge.</span><br><span class="line"># If this is not correct, please remove the file</span><br><span class="line">#    .git/MERGE_HEAD</span><br><span class="line"># and try again.</span><br><span class="line"></span><br><span class="line"># Please enter the commit message for your changes. Lines starting</span><br><span class="line"># with &#x27;#&#x27; will be ignored, and an empty message aborts the commit.</span><br><span class="line">#</span><br><span class="line"># On branch master</span><br><span class="line"># All conflicts fixed but you are still merging.</span><br><span class="line">#</span><br><span class="line"># Changes to be committed:</span><br><span class="line">#    modified:   index.html</span><br><span class="line">#</span><br></pre></td></tr></table></figure>
+
+<p>Git 預設訊息裡，你也可以自己編輯相關內容，若是覺得沒問題就儲存關閉，本次合併就完成了！</p>
+<h3 id="如果遠端協作發生分支衝突-參考：-https-w3c-hexschool-com-git-b0c9a9a4"><a href="#如果遠端協作發生分支衝突-參考：-https-w3c-hexschool-com-git-b0c9a9a4" class="headerlink" title="如果遠端協作發生分支衝突 參考： https://w3c.hexschool.com/git/b0c9a9a4"></a>如果遠端協作發生<strong>分支</strong>衝突 參考： <a target="_blank" rel="noopener" href="https://w3c.hexschool.com/git/b0c9a9a4">https://w3c.hexschool.com/git/b0c9a9a4</a></h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://raythomas4721.github.io/hexo-test/Note/Git-%E7%AD%86%E8%A8%98.html" data-id="cly6yppud00004jnmhbst8mjx" data-title="Git 筆記" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/hexo-test/tags/Git%E7%AD%86%E8%A8%98/" rel="tag">Git筆記</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/hexo-test/tags/Git%E7%AD%86%E8%A8%98/" style="font-size: 10px;">Git筆記</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/hexo-test/archives/2024/05/">五月 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/hexo-test/2024/05/27/About-Me/">關於我</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Po Jui Cheng<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/hexo-test/" class="mobile-nav-link">首頁</a>
+  
+    <a href="/hexo-test/archives" class="mobile-nav-link">部落格</a>
+  
+    <a href="/hexo-test/note" class="mobile-nav-link">筆記</a>
+  
+</nav>
+    
+
+
+<script src="/hexo-test/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/hexo-test/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/hexo-test/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
